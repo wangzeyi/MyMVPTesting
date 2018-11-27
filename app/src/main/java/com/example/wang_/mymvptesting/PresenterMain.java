@@ -8,10 +8,12 @@ import javax.inject.Inject;
 public class PresenterMain implements IPresenterMain {
 
     IViewMain viewMain;
+    ApiService apiService;
 
     @Inject
-    public PresenterMain(IViewMain viewMain) {
+    public PresenterMain(IViewMain viewMain, ApiService apiService) {
         this.viewMain = viewMain;
+        this.apiService = apiService;
     }
 
     @Override
@@ -22,5 +24,10 @@ public class PresenterMain implements IPresenterMain {
             mylist.add(i);
         }
         return mylist;
+    }
+
+    @Override
+    public String getApiName() {
+        return apiService.getName();
     }
 }

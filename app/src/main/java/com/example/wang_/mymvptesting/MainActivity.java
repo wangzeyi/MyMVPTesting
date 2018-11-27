@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements IViewMain {
             Log.d("MyTag", ""+i);
         }
 
+        String nm = presenterMain.getApiName();
+        Log.d("MyTag", nm);
+
     }
 
     @Override
