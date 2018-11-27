@@ -22,10 +22,8 @@ public class PresenterMainTest {
 
     @Mock
     IViewMain mainactivity;
-
     @Mock
     ApiService apiService;
-
     @InjectMocks
     PresenterMain presenterMain;
 

@@ -5,7 +5,10 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class MyTestModule {
+public class MyTestModule  extends MyModule {
 
-
+    @Override
+    public IViewMain getMain() {
+        return null;
+    }
 }
